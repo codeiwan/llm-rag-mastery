@@ -20,15 +20,40 @@ Beyond basic implementation, this project focuses on the following engineering m
 
 ## 🛠 Tech Stack
 * **Framework:** `LangChain` (including LCEL)
-* **LLM Interface:** `OpenAI`
+* **LLM Interface:** `OpenAI`, `Upstage`, `Ollama` (Local Environment)
+* **Vector Infrastructure:** `Chroma` (Local), `Pinecone` (Cloud)
 * **Frontend/Deployment:** `Streamlit`, `Streamlit Cloud`
 * **Observability:** `LangSmith`
 
 ---
 
+## 🧪 Research & Development (Experiments)
+
+Before implementing the core logic, I conduct detailed experiments in Jupyter Notebooks to validate the performance of embedding models, retrieval accuracy, and chain behavior.
+
+| No. | Research Topic | Description | Link | Status |
+| :-- | :--- | :--- | :--- | :--- |
+| 01 | **Embedding Similarity** | Testing semantic distance between words (King, Queen, Slave) using `text-embedding-3-large`. | [Notebook](./notebooks/01_embedding_similarity_test.ipynb) | ✅ |
+| 02 | **Retrieval Strategies** | Exploring different retrieval methods to improve hit rates. | - | ⏳ |
+
+---
+
 ## 🗺 Implementation Roadmap (WIP)
 
-This roadmap is dynamic and updated as development progresses. 
+*The roadmap is subject to change based on learning progress and technical requirements.*
+
+### Phase 1: RAG Infrastructure
+- [x] **Embedding Analysis:** Understanding semantic relationships between vectors.
+- [ ] **Vector Storage:** Implementing and comparing vector indexing solutions.
+- [ ] **Data Pipeline:** Preprocessing and optimizing documents for retrieval.
+
+### Phase 2: Orchestration & Logic
+- [ ] **Chain Design:** Developing modular LLM workflows using **LCEL**.
+- [ ] **Advanced Prompting:** Implementing Few-Shot and Template strategies.
+
+### Phase 3: Application & Evaluation
+- [ ] **UI/UX:** Building interactive interfaces with **Streamlit**.
+- [ ] **Observability:** Performance tracking and evaluation with **LangSmith**.
 
 ---
 
