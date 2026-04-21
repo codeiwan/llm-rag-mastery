@@ -34,7 +34,8 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 | No. | Research Topic | Description | Link | Status |
 | :-- | :--- | :--- | :--- | :--- |
 | 01 | **Embedding Similarity** | Testing semantic distance between words (King, Queen, Slave) using `text-embedding-3-large`. | [Notebook](./notebooks/01_embedding_similarity_test.ipynb) | ✅ |
-| 02 | **Retrieval Strategies** | Exploring different retrieval methods to improve hit rates. | - | ⏳ |
+| 02 | **LLM Connectivity** | Validating LangChain-OpenAI integration and basic model invocation. | [Notebook](./notebooks/02_langchain_llm_validation.ipynb) | ✅ |
+| 03 | **Retrieval Strategies** | Exploring different retrieval methods to improve hit rates. | - | ⏳ |
 
 ---
 
@@ -44,12 +45,13 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 
 ### Phase 1: RAG Infrastructure
 - [x] **Embedding Analysis:** Understanding semantic relationships between vectors.
-- [ ] **Vector Storage:** Implementing and comparing vector indexing solutions.
-- [ ] **Data Pipeline:** Preprocessing and optimizing documents for retrieval.
+- [x] **Environment Setup:** Confirmed connectivity for LangChain and LLM providers.
+- [ ] **Vector Storage:** Implementing and comparing vector indexing solutions (Chroma, Pinecone).
+- [ ] **Data Pipeline:** Preprocessing and optimizing documents for retrieval efficiency.
 
 ### Phase 2: Orchestration & Logic
 - [ ] **Chain Design:** Developing modular LLM workflows using **LCEL**.
-- [ ] **Advanced Prompting:** Implementing Few-Shot and Template strategies.
+- [ ] **Advanced Prompting:** Implementing Few-Shot and Template strategies for reliability.
 
 ### Phase 3: Application & Evaluation
 - [ ] **UI/UX:** Building interactive interfaces with **Streamlit**.
