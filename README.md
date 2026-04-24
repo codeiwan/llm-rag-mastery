@@ -37,6 +37,7 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 | 02 | **LLM Connectivity** | Validating LangChain-OpenAI integration and basic model invocation. | [Notebook](./notebooks/02_langchain_llm_validation.ipynb) | ✅ |
 | 03 | **Chroma & LCEL RAG** | End-to-end RAG pipeline implementation using Chroma and LCEL. | [Notebook](./notebooks/03_rag_with_chroma_lcel.ipynb) | ✅ |
 | 04 | **Manual RAG Study** | Comparative study of building RAG without LangChain to understand internal mechanics. | [Notebook](./notebooks/04_manual_rag_without_langchain.ipynb) | ✅ |
+| 05 | **Pinecone & DB Migration** | Seamlessly switching from local Chroma to cloud-based Pinecone using LangChain's abstraction. | [Notebook](./notebooks/05_rag_with_pinecone_lcel.ipynb) | ✅ |
 
 ---
 
@@ -53,8 +54,8 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 
 ### Phase 2: Orchestration & Logic
 - [x] **Chain Design:** Developed modular LLM workflows using **LCEL**.
+- [x] **Multi-Vector DB:** Integrated **Pinecone** for cloud-based scaling.
 - [ ] **Advanced Prompting:** Implementing Few-Shot and Template strategies for reliability.
-- [ ] **Multi-Vector DB:** Integrating **Pinecone** for cloud-based scaling.
 
 ### Phase 3: Application & Evaluation
 - [ ] **UI/UX:** Building interactive interfaces with **Streamlit**.
