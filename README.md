@@ -36,6 +36,7 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 | 01 | **Embedding Similarity** | Testing semantic distance between words using `text-embedding-3-large`. | [Notebook](./notebooks/01_embedding_similarity_test.ipynb) | ✅ |
 | 02 | **LLM Connectivity** | Validating LangChain-OpenAI integration and basic model invocation. | [Notebook](./notebooks/02_langchain_llm_validation.ipynb) | ✅ |
 | 03 | **Chroma & LCEL RAG** | End-to-end RAG pipeline implementation using Chroma and LCEL. | [Notebook](./notebooks/03_rag_with_chroma_lcel.ipynb) | ✅ |
+| 04 | **Manual RAG Study** | Comparative study of building RAG without LangChain to understand internal mechanics. | [Notebook](./notebooks/04_manual_rag_without_langchain.ipynb) | ✅ |
 
 ---
 
@@ -48,6 +49,7 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 - [x] **Environment Setup:** Confirmed connectivity for LangChain and LLM providers.
 - [x] **Vector Storage:** Implemented local persistence with **Chroma**.
 - [x] **Data Pipeline:** Integrated document loading and chunking strategies.
+- [x] **Framework Deep Dive:** Comparative analysis of Manual RAG vs. LangChain abstraction.
 
 ### Phase 2: Orchestration & Logic
 - [x] **Chain Design:** Developed modular LLM workflows using **LCEL**.
