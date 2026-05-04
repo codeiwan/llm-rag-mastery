@@ -57,11 +57,18 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 - [x] **Chain Design:** Developed modular LLM workflows using **LCEL**.
 - [x] **Multi-Vector DB:** Integrated **Pinecone** for cloud-based scaling.
 - [x] **Retrieval Refinement:** Implemented **Query Transformation** using Keyword Dictionaries.
-- [ ] **Advanced Prompting:** Implementing Few-Shot and Template strategies for reliability.
 
 ### Phase 3: Application & Evaluation
-- [ ] **UI/UX:** Building interactive interfaces with **Streamlit**.
-- [ ] **Observability:** Performance tracking and evaluation with **LangSmith**.
+- [x] **UI/UX:** Built an interactive chat interface using **Streamlit**.
+- [ ] **Integration:** Connecting the LCEL RAG Chain to the Streamlit frontend.
+- [ ] **Observability:** Real-time performance tracking with **LangSmith**.
+
+---
+
+## 🤖 Chatbot Interface (Streamlit)
+The project now features a user-centric conversational interface designed for tax-related inquiries.
+*   **Session State Management:** Ensures continuity of conversation by retaining message history across re-runs.
+*   **Modern Chat UI:** Implements `st.chat_message` and `st.chat_input` for a seamless, production-ready user experience.
 
 ---
 

@@ -1,2 +1,11 @@
+# Security & Environment
 .env
+.venv/
+
+# Vector Databases
 **/chroma_db/
+
+# Python & Notebooks
+__pycache__/
+.ipynb_checkpoints/
+.streamlit/
