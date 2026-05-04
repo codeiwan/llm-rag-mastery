@@ -39,6 +39,7 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 | 04 | **Manual RAG Study** | Comparative study of building RAG without LangChain to understand internal mechanics. | [Notebook](./notebooks/04_manual_rag_without_langchain.ipynb) | ✅ |
 | 05 | **Pinecone & DB Migration** | Seamlessly switching from local Chroma to cloud-based Pinecone. | [Notebook](./notebooks/05_rag_with_pinecone_lcel.ipynb) | ✅ |
 | 06 | **Query Transformation** | Optimizing retrieval efficiency using a Keyword Dictionary and Query Rewriting. | [Notebook](./notebooks/06_query_transformation_with_dictionary.ipynb) | ✅ |
+| 07 | **Integration Sandbox** | End-to-end flow validation before UI implementation. | [Notebook](./for_streamlit.ipynb) | ✅ |
 
 ---
 
@@ -60,8 +61,8 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 
 ### Phase 3: Application & Evaluation
 - [x] **UI/UX:** Built an interactive chat interface using **Streamlit**.
-- [ ] **Integration:** Connecting the LCEL RAG Chain to the Streamlit frontend.
-- [ ] **Observability:** Real-time performance tracking with **LangSmith**.
+- [x] **System Integration:** Successfully connected the refined LCEL RAG logic to the frontend
+- [ ] **Observability:** Real-time performance tracking and tracing with **LangSmith**.
 
 ---
 
@@ -77,6 +78,10 @@ The project now features a user-centric conversational interface designed for ta
 > "The difference between a demo and a product is reliability."
 
 This project is not just about writing code but about understanding the **debugging process** in LLM services. It includes logs on handling API quotas, debugging chain logic, and optimizing retrieval hit rates in various environments (Cloud & Local).
+
+*   **End-to-End Integration:** Integrated the dictionary-based query transformation layer into a real-time chat application[cite: 17].
+*   **Stateful Interaction:** Leveraged `st.session_state` to maintain a seamless chat history for users[cite: 17].
+*   **Flow Validation:** Utilized `for_streamlit.ipynb` as a pre-integration sandbox to verify the combined chain's output before frontend deployment.
 
 ---
 
