@@ -57,19 +57,21 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 ### Phase 2: Orchestration & Logic
 - [x] **Chain Design:** Developed modular LLM workflows using **LCEL**.
 - [x] **Multi-Vector DB:** Integrated **Pinecone** for cloud-based scaling.
-- [x] **Retrieval Refinement:** Implemented **Query Transformation** using Keyword Dictionaries.
+- [x] **Retrieval Refinement:** Implemented **Query Transformation** & **History-Aware Retrieval**.
 
 ### Phase 3: Application & Evaluation
 - [x] **UI/UX:** Built an interactive chat interface using **Streamlit**.
-- [x] **System Integration:** Successfully connected the refined LCEL RAG logic to the frontend
+- [x] **Conversational UX:** Implemented **Chat History** and **Streaming** for seamless interaction.
 - [ ] **Observability:** Real-time performance tracking and tracing with **LangSmith**.
 
 ---
 
-## 🤖 Chatbot Interface (Streamlit)
-The project now features a user-centric conversational interface designed for tax-related inquiries.
-*   **Session State Management:** Ensures continuity of conversation by retaining message history across re-runs.
-*   **Modern Chat UI:** Implements `st.chat_message` and `st.chat_input` for a seamless, production-ready user experience.
+## 🤖 Chatbot Interface
+The chatbot now supports sophisticated conversational capabilities to provide a natural user experience.
+
+*   **Streaming Responses:** Minimized perceived latency by displaying LLM outputs in real-time using `st.write_stream`.
+*   **Context Retention:** Maintains session-specific history, allowing the AI to understand and resolve ambiguous follow-up questions.
+*   **Stateful Memory:** Leverages `ChatMessageHistory` and `st.session_state` to track multi-turn dialogues accurately.
 
 ---
 
@@ -77,11 +79,17 @@ The project now features a user-centric conversational interface designed for ta
 
 > "The difference between a demo and a product is reliability."
 
-This project is not just about writing code but about understanding the **debugging process** in LLM services. It includes logs on handling API quotas, debugging chain logic, and optimizing retrieval hit rates in various environments (Cloud & Local).
+This project focuses on the systematic **debugging process** and **optimization** of RAG pipelines across various environments.
 
-*   **End-to-End Integration:** Integrated the dictionary-based query transformation layer into a real-time chat application[cite: 17].
-*   **Stateful Interaction:** Leveraged `st.session_state` to maintain a seamless chat history for users[cite: 17].
-*   **Flow Validation:** Utilized `for_streamlit.ipynb` as a pre-integration sandbox to verify the combined chain's output before frontend deployment.
+### 🛠 Core Implementation
+* **End-to-End Integration:** Successfully linked a dictionary-based query transformation layer with a real-time Streamlit application.
+* **Stateful Interaction:** Leveraged `st.session_state` and `ChatMessageHistory` to maintain seamless multi-turn dialogues.
+* **Generator Handling:** Managed Python generators from `.stream()` for progressive UI updates, significantly improving perceived latency.
+
+### 🧠 Advanced RAG Logic
+* **Query Reformulation:** Mastered the `create_history_aware_retriever` pattern to transform context-dependent input into standalone search queries.
+* **In-memory Store:** Built a session-based memory store using a dictionary to ensure thread-safe, isolated conversations.
+* **Flow Validation:** Established a pre-integration sandbox (`for_streamlit.ipynb`) to verify complex LCEL chains before frontend deployment.
 
 ---
 
