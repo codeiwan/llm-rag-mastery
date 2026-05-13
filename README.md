@@ -58,20 +58,21 @@ Before implementing the core logic, I conduct detailed experiments in Jupyter No
 - [x] **Chain Design:** Developed modular LLM workflows using **LCEL**.
 - [x] **Multi-Vector DB:** Integrated **Pinecone** for cloud-based scaling.
 - [x] **Retrieval Refinement:** Implemented **Query Transformation** & **History-Aware Retrieval**.
+- [x] **Advanced Prompting:** Implemented **Few-Shot Prompting** for enhanced response reliability and formatting.
 
 ### Phase 3: Application & Evaluation
 - [x] **UI/UX:** Built an interactive chat interface using **Streamlit**.
 - [x] **Conversational UX:** Implemented **Chat History** and **Streaming** for seamless interaction.
-- [ ] **Observability:** Real-time performance tracking and tracing with **LangSmith**.
+- [ ] **Observability:** Performance tracking and tracing with **LangSmith**.
 
 ---
 
 ## 🤖 Chatbot Interface
 The chatbot now supports sophisticated conversational capabilities to provide a natural user experience.
 
-*   **Streaming Responses:** Minimized perceived latency by displaying LLM outputs in real-time using `st.write_stream`.
-*   **Context Retention:** Maintains session-specific history, allowing the AI to understand and resolve ambiguous follow-up questions.
-*   **Stateful Memory:** Leverages `ChatMessageHistory` and `st.session_state` to track multi-turn dialogues accurately.
+* **Few-Shot Learning:** Guides the LLM to provide consistent, high-quality answers by providing curated examples of legal interpretations and source attributions.
+* **Streaming Responses:** Minimized perceived latency by displaying LLM outputs in real-time using `st.write_stream`.
+* **Context Retention:** Maintains session-specific history, allowing the AI to understand and resolve ambiguous follow-up questions.
 
 ---
 
@@ -87,9 +88,10 @@ This project focuses on the systematic **debugging process** and **optimization*
 * **Generator Handling:** Managed Python generators from `.stream()` for progressive UI updates, significantly improving perceived latency.
 
 ### 🧠 Advanced RAG Logic
+* **Few-Shot Orchestration:** Implemented `FewShotChatMessagePromptTemplate` to provide in-context examples, ensuring the assistant follows a specific persona and citation style.
 * **Query Reformulation:** Mastered the `create_history_aware_retriever` pattern to transform context-dependent input into standalone search queries.
+* **Separation of Concerns:** Externalized prompt examples and configurations into `config.py` for better maintainability and cleaner code structure.
 * **In-memory Store:** Built a session-based memory store using a dictionary to ensure thread-safe, isolated conversations.
-* **Flow Validation:** Established a pre-integration sandbox (`for_streamlit.ipynb`) to verify complex LCEL chains before frontend deployment.
 
 ---
 
